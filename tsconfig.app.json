@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+       
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "@auth/*": ["presentation/Auth*"],
+      "@components/*": ["presentation/shared/components*"],
+      "@authcomponents/*": ["presentation/Auth/loginpage/components*"],
+      "@taskmeComponents/*": ["presentation/taskme/components*"],
+      "@taskme/*": ["presentation/taskme/dashboard*"],
+
+      "@hooks/*": ["presentation/shared/hooks/*"],
+      "routes/*": ["presentation/routes/*"],
+      "@assets/*": ["assets/*"],
+      "@modules/*": ["modules/*"]
+    },
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]
+}

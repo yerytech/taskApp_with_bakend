@@ -12,10 +12,11 @@ export default {
     extend: {
       colors: {
         primary: "#2563EB", // Azul
-        secondary: "#FBBF24", // Amarillo
+        secondary: "#000000", // Amarillo
         success: "#22C55E", // Verde
         warning: "#F59E0B", // Amarillo para advertencias
-        error: "#EF4444", //
+        error: "#EF4444",
+        black: "#000000",
 
         //Ligth Mode
         light: {

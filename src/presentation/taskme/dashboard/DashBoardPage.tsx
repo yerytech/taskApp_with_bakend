@@ -1,22 +1,28 @@
 
 
-import { Navbar, NavbarContent, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react"
+import { Search } from "@components//Search";
+import {
+  Link,
+  Navbar,
+  NavbarContent,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+} from "@nextui-org/react";
+import { AddTask } from "@taskmeComponents//AddTask";
 import { BodyPageContent } from "@taskmeComponents//BodyPageContent.tsx";
+
+// import { BodyPageContent } from "@taskmeComponents//BodyPageContent.tsx";
 import { FAB } from "@taskmeComponents//FAB";
 
-
-
-
-
-export const DashBoardPage = 
-  () => {
-    const menuItems = ['Personal', 'Design', 'DevelopMent', 'Profile','LogOut']
+export const DashBoardPage = () => {
+  const menuItems = ["Profile", "Info", "LogOut"];
   return (
     <>
       <Navbar
         disableAnimation
         isBordered
-        className="h-min"
+        className=" bg-transparent"
       >
         <NavbarContent className="sm:hidden justify-start">
           <NavbarMenuToggle />
@@ -26,11 +32,24 @@ export const DashBoardPage =
             <NavbarMenuItem key={item}>{item}</NavbarMenuItem>
           ))}
         </NavbarMenu>
+
+        <div className="  flex-row hidden sm:block  ">
+          {menuItems.map((item) => (
+            <Link
+              color="secondary"
+              className="pl-32 text-xl"
+              key={item}
+            >
+              {item}
+            </Link>
+          ))}
+        </div>
+        <Search />
       </Navbar>
-       <BodyPageContent/>
-      
-      <FAB/>
-      {/* <Search/> */}
+
+      <BodyPageContent />
+      {/* <AddTask /> */}
+      <FAB />
     </>
   );
-}
+};
